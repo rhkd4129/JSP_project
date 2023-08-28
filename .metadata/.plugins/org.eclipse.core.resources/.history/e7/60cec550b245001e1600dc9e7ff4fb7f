@@ -1,0 +1,57 @@
+package project;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+public class postDAO {
+	
+	Connection conn = null;
+	
+	private Connection getConnection() throws SQLException {
+		try {
+			Context cxt = new InitialContext();
+			DataSource ds = (DataSource)cxt.lookup("java:comp/env/jdbc/OracleDB");
+			conn = ds.getConnection();
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
+
+		return conn;
+	
+	}
+	
+	public int insert(postDTO post) throws SQLException{
+		String sql ="INSERT INTO POST values(seq_post_id.NEXTVAL,?,?,sysdate)";
+		PreparedStatement pstmt = null;
+		int reuslt;
+		
+		
+	
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+		
+			pstmt.setString(2, post.getTitle());
+			pstmt.setString(3, post.getContent());
+			
+			result = pstmt.executeUpdate();
+			
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+		}finally {
+			if(pstmt != null)pstmt.close();
+			if(conn != null)pstmt.close();
+		}
+		
+	
+		return result;
+	}
+}		
+	

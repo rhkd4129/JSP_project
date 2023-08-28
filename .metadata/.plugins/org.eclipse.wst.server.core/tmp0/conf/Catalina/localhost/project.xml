@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="C:\githubRepository\JSP_Project\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\project" path="/project" reloadable="true" source="org.eclipse.jst.jee.server:project">
+	<Resource MaxIdle="10" auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory" maxActive="50" name="jdbc/OracleDB" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:xe" username="scott"/>
+	
+	
+		<Resource MaxIdle="10" auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory" maxActive="100" name="jdbc/mysql" password="mysql80" type="javax.sql.DataSource" url="jdbc:mysql://127.0.0.1:3306/scottdbdb" username="root"/>
+	
+	
+
+
+
+
+
+</Context>
