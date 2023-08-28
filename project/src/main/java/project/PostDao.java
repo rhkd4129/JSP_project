@@ -1,7 +1,10 @@
 package project;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -27,6 +30,33 @@ public class PostDao {
 		return conn;
 	
 	}
+	
+	
+	public ArrayList<Post> selectAll() throws SQLException{
+		ArrayList<Post> pl = new ArrayList<Post>();
+		String sql ="select title,content,reg_date from post";
+		Statement stmt = null;
+		try {
+			conn = getConnection();
+			stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			do {
+				Post post = new Post();
+				post.setTitle(rs.getString(1));
+				post.setContent(rs.getString(2));
+				post.setRegDate(rs.getDate(3));
+				pl.add(post);
+			}while(rs.next());
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+			System.out.println("select 오류");
+		}
+		return pl;
+		
+	}
+	
 	
 	public int insert(Post post) throws SQLException{
 		String sql ="INSERT INTO POST (id,title,content,reg_date) values(seq_post_id.NEXTVAL,?,?,sysdate)";

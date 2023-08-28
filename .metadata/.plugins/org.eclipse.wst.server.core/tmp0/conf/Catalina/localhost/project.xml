@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context docBase="C:\githubRepository\JSP_Project\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\project" path="/project" reloadable="true" source="org.eclipse.jst.jee.server:project">
+<Context docBase="C:\githubRepository\JSP_project\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\project" path="/project" reloadable="true" source="org.eclipse.jst.jee.server:project">
 	<Resource MaxIdle="10" auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory" maxActive="50" name="jdbc/OracleDB" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:xe" username="scott"/>
 	
 	
