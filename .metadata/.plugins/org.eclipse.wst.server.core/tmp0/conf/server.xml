@@ -160,7 +160,12 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\githubRepository\JSP_project\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/></Host>
+      <Context docBase="C:\githubRepository\JSP_project\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\githubRepository\JSP_project\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\jsp0906" path="/jsp0906" reloadable="true" source="org.eclipse.jst.jee.server:jsp0906">
+  <Resource auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory" maxActive="50" maxIdle="10" name="jdbc/OracleDB" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@127.0.0.1:1521:xe" username="jsp0906"/>
+  
+  <Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory" maxActive="100" maxIdle="10" name="jdbc/MySql" password="mysql80" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/scottdb?serverTimezone=UTC" username="root"/>
+
+</Context></Host>
     </Engine>
   </Service>
 </Server>
