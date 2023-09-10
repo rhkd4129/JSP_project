@@ -1,7 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <!-- jspinclude는 page영역공유 안되고  reqeuest영역은 공유도미? -->
-    
- footer파일
-<h4>저작권 침해시 법적처벌대상 유의</h4>
-<h5>중앙정보(주) 02-1234-5678</h5>
+
+
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+    </ul>
+      <p class="mb-3 mb-md-0 text-center text-body-secondary">
+      <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg> 2023 Company, Inc</p>
+  </footer>
