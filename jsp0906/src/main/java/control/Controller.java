@@ -42,13 +42,13 @@ public class Controller extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		// web.xml에서 propertyConfig에 해당하는 init-param 의 값을 읽어옴
 		String props = config.getInitParameter("config");
-		System.out.println("1. init String props=> "+ props);
+//		System.out.println("1. init String props=> "+ props);
 		Properties      pr = new Properties();
 		FileInputStream f  = null;
 		
 		try {
 			String configFilePath = config.getServletContext().getRealPath(props);
-			System.out.println("2. init String configFilePath=> "+ configFilePath);
+//			System.out.println("2. init String configFilePath=> "+ configFilePath);
 			// String props=>file 변신
 			f = new FileInputStream(configFilePath);
 			
@@ -75,9 +75,9 @@ public class Controller extends HttpServlet {
 			 String command   = (String) keyIter.next();
 			 // service.ListAction
 			 String className = pr.getProperty(command);
- 	 		 System.out.println("3. init command=> "+ command);  // /list.do
-	         System.out.println("4. init className=> "+ className);  
-			 
+// 	 		 System.out.println("3. init command=> "+ command);  // /list.do
+//	         System.out.println("4. init className=> "+ className);  
+//			 
 		 
 		     // ListAction listAction = new ListAction();
 		     try {
@@ -117,16 +117,16 @@ public class Controller extends HttpServlet {
 		String view        = null;
 	    CommandProcess com = null;
 	    String command = request.getRequestURI();
-		System.out.println("1. requestServletPro command=> "+ command);  // /och16/list.do
+//		System.out.println("1. requestServletPro command=> "+ command);  // /och16/list.do
 	    command = command.substring(request.getContextPath().length());
-		System.out.println("2. requestServletPro command substring=> "+ command);  // /ch16/com
+//		System.out.println("2. requestServletPro command substring=> "+ command);  // /ch16/com
 		
 		try {
 			//  service.ListAction Instance    
 			//   
 			com  = (CommandProcess) commandMap.get(command);
-			System.out.println("3.requestServletPro command=> "+ command);  // /ch16/com
-			System.out.println("4.requestServletPro com=> "+ com);  // /ch16/com
+//			System.out.println("3.requestServletPro command=> "+ command);  // /ch16/com
+//			System.out.println("4.requestServletPro com=> "+ com);  // /ch16/com
 		    //   com --> service.ListAction@4f73ca61
 			// service.ListAction.requestPro
 			view = com.requestPro(request, response);
