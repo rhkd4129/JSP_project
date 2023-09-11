@@ -15,21 +15,30 @@
 		<!--<form action="writePro.do?pageNum=${pageNum}" method="post">
 			<input type="hidden" name="ref" value="${ref}">
 		 -->
-		<form action = "sawonWritePro.do" method="post">
-		
-		<table>
-			<caption> <h2> 사원 등록  </h2></caption>
-				<tr> <td>이름</td>  <td> <input type="text" name="sawon_name"></td></tr>
-				<tr> <td>급여</td>  <td> <input type="text" name="sal"></td></tr>
-				<tr> <td>번호</td>  <td> <input type="tel" name="handphone"></td></tr>
-				<tr> 
-					<td><input type="submit" value="작성" class="btn btn-primary"></td> 
-					<td><input type="reset" value="다시작성" class="btn btn-primary"></td>	
-		
-		
-		</table>
-		
-	</form>
+	
+	 <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <!-- 회원가입 폼 시작 -->
+                <form action = "sawonWritePro.do" method="post">
+                    <div class="mb-3">
+                        <label for="sawon_name" class="form-label">이름</label>
+                        <input type="text" class="form-control" id="sawon_name" name="sawon_name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="sal" class="form-label">급여</label>
+                        <input type="text" class="form-control" id="sal" name="sal">
+                    </div>
+                    <div class="mb-3">
+                        <label for="handphone" class="form-label">핸드폰 번호</label>
+                        <input type="tel" class="form-control"  id="handphone" name="handphone">
+                    </div>
+                    <button type="submit" class="btn btn-primary">가입하기</button>
+                </form>
+                <!-- 회원가입 폼 끝 -->
+            </div>
+        </div>
+    </div>
 	<jsp:include page="../layout/footer.jsp" />
 </body>
 </html>

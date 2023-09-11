@@ -43,7 +43,7 @@ public class SawonWriteProAction implements CommandProcess {
 		
 		
 		
-		return "views/sawon/SawonWritePro.jsp";
+		return "views/sawon/sawonWritePro.jsp";
 	}
 
 }

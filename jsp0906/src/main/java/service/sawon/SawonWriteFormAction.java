@@ -13,6 +13,11 @@ public class SawonWriteFormAction implements CommandProcess {
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+	
+		
+//		String pageNum = request.getParameter("pageNum");
+//		if(pageNum== null) pageNum="1";
+//		request.setAttribute("pageNum", pageNum);
 		// 
 		return "views/sawon/sawonWriteForm.jsp";
 	}

@@ -12,10 +12,10 @@ public class Item {
 	
 	
 	
-	public int getItem() {
+	public int getItem_code() {
 		return item_code;
 	}
-	public void setItem(int item_code) {
+	public void setItem_code(int item_code) {
 		this.item_code = item_code;
 	}
 	public String getItem_name() {
