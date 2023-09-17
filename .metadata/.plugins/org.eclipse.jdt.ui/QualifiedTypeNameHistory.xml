@@ -25,6 +25,8 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="dto.Sawon"/>
     <fullyQualifiedTypeName name="dao.SawonDao"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="dto.Custom"/>
+    <fullyQualifiedTypeName name="dao.CustomDao"/>
 </qualifiedTypeNameHistroy>

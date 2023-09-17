@@ -12,7 +12,7 @@
 	<c:if test ="${result>0}">
 		<script type="text/javascript">
 			alert("삭제완료");
-			location.href="sawonlist.do?pageNum=${pageNum}";
+			location.href="sawonList.do?pageNum=${pageNum}";
 			
 		</script>
 	</c:if>
@@ -20,7 +20,7 @@
 	<c:if test ="${result == 0}">
 		<script type="text/javascript">
 			alert("삭제 불가 ");
-			location.href="sawonDeleteForm.do?Num=${num}&pageNum=${pageNum}";
+			location.href="sawonContent.do?sabun=${sabun}&pageNum=${pageNum}";
 		</script>
 	</c:if>
 	

@@ -13,10 +13,7 @@
 <body>
 
 	<jsp:include page="../layout/header.jsp" />
-	<!--  -->
-		<!--<form action="writePro.do?pageNum=${pageNum}" method="post">
-			<input type="hidden" name="ref" value="${ref}">
-		 -->
+
 	
 	 <div class="container mt-5">
         <div class="row justify-content-center">

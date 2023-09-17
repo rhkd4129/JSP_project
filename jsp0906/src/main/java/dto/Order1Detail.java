@@ -7,6 +7,7 @@ public class Order1Detail {
     private String   	order_date;
     private String  	order_item_desc;
 	private int     item_count;
+	
     private String		custname;
     
     

@@ -11,20 +11,20 @@
 <body>
 	<c:if test ="${result>0}">
 		<script type="text/javascript">
-			alert("입력완료");
-			location.href="order1List.do?"; 
+			alert("삭제완료");
+			location.href="sawonlist.do?pageNum=${pageNum}";
 			
 		</script>
 	</c:if>
 	
 	<c:if test ="${result == 0}">
 		<script type="text/javascript">
-			alert("오류");
-			location.href="order1WriteForm.do";
+			alert("삭제 불가 ");
+			location.href="sawonDeleteForm.do?Num=${num}&pageNum=${pageNum}";
 		</script>
 	</c:if>
 	
-	HI?
+	
 	
 </body>
 </html>

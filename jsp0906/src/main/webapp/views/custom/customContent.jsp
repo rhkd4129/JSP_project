@@ -29,22 +29,27 @@
 				    <table >
 					
 					<tr >
-						<td width="50">번호</td>
-						<td>${sawon.sabun}</td>
+						<td width="50">코드번호</td>
+						<td>${custom.custcode}</td>
 					</tr>
 					<tr>
 						<td>이름</td>
-						<td>${sawon.sawon_name}</td>
+						<td>${custom.custname}</td>
 					</tr>
 					
 					<tr>
-						<td>급여</td>
-						<td>${sawon.sal}</td>
+						<td>번호</td>
+						<td>${custom.cust_tel}</td>
 					</tr>
 					
 					<tr>
-						<td>폰번호</td>
-						<td>${sawon.handphone}</td>
+						<td>구분</td>
+						<td>${custom.cust_gubun}</td>
+					</tr>
+					
+					<tr>
+						<td>CEO</td>
+						<td>${custom.cust_ceo}</td>
 					</tr>
 				</table>
 		    </div>
@@ -53,17 +58,19 @@
 	
 	<div class="d-flex justify-content-center">
 		<input type="button" value="수정"  class="btn btn-primary mx-1"
-				onclick="location.href='sawonUpdateForm.do?sabun=${sawon.sabun}&pageNum=${pageNum}'">
+				onclick="location.href=customUpdateForm.do?custcode=${custom.custcode}&pageNum=${pageNum}'">
 				 
 				<input type="button" value="삭제" class="btn btn-primary mx-1" 
-				onclick="location.href='sawonDeleteForm.do?sabun=${sawon.sabun}&pageNum=${pageNum}'">
+				onclick="location.href='customDeleteForm.do?custcode=${custom.custcode}&pageNum=${pageNum}'">
 										
-				<input type="button" value="주문등록" class="btn btn-primary mx-1" 
-				onclick="location.href='order1WriteForm.do?sabun=${sawon.sabun}&pageNum=${pageNum}'">
+										
+										<!-- <input type="button" value="주문등록" class="btn btn-primary mx-1" 
+				onclick="location.href='customWriteForm.do?custcode=${custom.custcode}&pageNum=${pageNum}'"> -->
+				
 				
 				
 				<input type="button" value="목록" class="btn btn-primary mx-1"
-				onclick="location.href='sawonList.do?pageNum=${pageNum}'">
+				onclick="location.href='customList.do?pageNum=${pageNum}'">
 	</div>
 	<jsp:include page="../layout/footer.jsp"/>
 </body>

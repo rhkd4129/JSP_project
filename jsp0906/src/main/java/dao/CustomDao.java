@@ -188,5 +188,39 @@ public class CustomDao {
 		return result;
 	}
 	
+	public Custom customDetail(int custcode) throws SQLException {
+		
+		Custom custom = new Custom();
+		ResultSet rs = null;
+		Connection conn = null; 
+		String sql = "select * from custom where custcode=?"; 
+		PreparedStatement pstmt = null;
+		conn = getConnection();
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setInt(1,custcode);
+		try {
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				custom.setCustcode(custcode);
+				custom.setCustname(rs.getString("custname"));
+				custom.setCust_tel(rs.getString("cust_tel"));
+				custom.setCust_gubun(rs.getString("cust_gubun"));
+				custom.setCust_ceo(rs.getString("cust_ceo"));
+				
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+			System.out.println("customDetail dao 오류");
+		}
+		finally {
+			if(rs!= null) rs.close();
+			if(pstmt!= null) pstmt.close();
+			if(conn!= null) conn.close();
+		}
+		
+		return custom;
+	}
+	
 }
 

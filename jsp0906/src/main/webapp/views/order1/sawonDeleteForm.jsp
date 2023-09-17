@@ -10,7 +10,6 @@
 </head>
 
 <body>
-		${sabun}
 	<form action=sawonDeletePro.do method="post">
 		<input type="hidden" name="sabun" value="${sabun}">
 		<input type="hidden" name="pageNum" value="${pageNum}">

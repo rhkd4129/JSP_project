@@ -1,4 +1,4 @@
-package service.sawon;
+package service.order1;
 
 import java.io.IOException;
 import java.rmi.ServerException;
@@ -8,12 +8,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.ItemDao;
 import dao.SawonDao;
+import dto.Item;
 import dto.Sawon;
 import service.CommandProcess;
 
 
-public class SawonDeleteProAction implements CommandProcess {
+public class Order1DeleteProAction implements CommandProcess {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response)
@@ -23,26 +25,25 @@ public class SawonDeleteProAction implements CommandProcess {
 		request.setCharacterEncoding("utf-8");
 		
 		int result=0;
-        int sabun = Integer.parseInt(request.getParameter("sabun"));
+        int item_code = Integer.parseInt(request.getParameter("item_code"));
         String pageNum = request.getParameter("pageNum");
         
         
         
         	
        
-        SawonDao sawonDao = SawonDao.getInstance();
-	    Sawon sawon = new Sawon();
+        ItemDao itemDao = ItemDao.getInstance();
+	    Item item = new Item();
         try {
-			result = sawonDao.delete(sabun);
+			result = itemDao.delete(item_code);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
         request.setAttribute("pageNum", pageNum);
         request.setAttribute("result", result);
-        request.setAttribute("sabun", sabun);
         
         
-        return "views/sawon/sawonDeletePro.jsp";
+        return "views/item/itemDeletePro.jsp";
 	}
 
 }

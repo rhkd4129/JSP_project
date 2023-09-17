@@ -1,4 +1,4 @@
-package service.order1;
+package service.custom;
 
 import java.io.IOException;
 
@@ -6,15 +6,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.CustomDao;
 import dao.ItemDao;
-import dao.Order1Dao;
 import dao.SawonDao;
+import dto.Custom;
 import dto.Item;
-import dto.Order1;
 import dto.Sawon;
 import service.CommandProcess;
 
-public class Order1ContentAction implements CommandProcess {
+public class CustomContentAction implements CommandProcess {
 
 		@Override
 		public String requestPro(HttpServletRequest request, HttpServletResponse response)
@@ -26,27 +26,27 @@ public class Order1ContentAction implements CommandProcess {
 	
 		
 		try {	
-			int cust_code = Integer.parseInt(  request.getParameter("cust_code"));
+			int custcode = Integer.parseInt(  request.getParameter("custcode"));
 			String pageNum = request.getParameter("pageNum");
-			String order_date = request.getParameter("order_date");
 			
 			
 			System.out.println("---------------------");
 			
 			
-			Order1Dao order1Dao = Order1Dao.getInstance();
-			Order1 order1 = order1Dao.order1Detail(order_date, cust_code);
-			 
+			ItemDao itemDao = ItemDao.getInstance();
+			CustomDao customDao = CustomDao.getInstance();
+			Custom custom = customDao.customDetail(custcode);
 			
 			
-			request.setAttribute(Integer.toString(order1.getSabun()),"sabun");
-			request.setAttribute("order1", order1);
+			
+			request.setAttribute("item_code", custcode);
+			request.setAttribute("custom", custom);
 			request.setAttribute("pageNum", pageNum);
 			
 		} catch (Exception e) {
 			System.out.println("SawonContentAction e message->"+e.getMessage());
 		}
-		return "views/order1/order1Content.jsp";
+		return "views/custom/customContent.jsp";
 		}
 }
 

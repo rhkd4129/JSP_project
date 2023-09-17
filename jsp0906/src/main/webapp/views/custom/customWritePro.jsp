@@ -12,7 +12,7 @@
 	<c:if test ="${result>0}">
 		<script type="text/javascript">
 			alert("입력완료");
-			location.href="custom1List.do?";
+			location.href="customList.do";
 			
 		</script>
 	</c:if>

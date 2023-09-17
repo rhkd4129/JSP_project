@@ -13,10 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 import dao.CustomDao;
 import dao.ItemDao;
 import dao.Order1Dao;
+import dao.OrderDetailDao;
 import dao.SawonDao;
 import dto.Custom;
 import dto.Item;
 import dto.Order1;
+import dto.Order1Detail;
 import dto.Sawon;
 import service.CommandProcess;
 
@@ -29,7 +31,7 @@ public class Order1DetailWriteFormAction implements CommandProcess {
 //	
 		int custcode = Integer.parseInt(request.getParameter("custcode"));
 		String order_date =request.getParameter("order_date"); 
-		
+		System.out.println("Order1DetailWriteFormAction");
 //		
 //		
 //		HashMap<Integer,String> fkCustomLists = new HashMap<Integer,String>();
@@ -42,6 +44,15 @@ public class Order1DetailWriteFormAction implements CommandProcess {
 			
 			request.setAttribute("order1", order1);
 			request.setAttribute("getItemnameList", getItemnameList);
+			
+			/////List
+			OrderDetailDao orderDetailDao = OrderDetailDao.getInstance();
+			
+			ArrayList<Order1Detail> order1detailList =  orderDetailDao.order1DetailList(1, 10);
+			request.setAttribute("order1detailList", order1detailList);
+			
+			
+			
 
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

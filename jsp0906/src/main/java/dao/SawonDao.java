@@ -221,13 +221,8 @@ public class SawonDao {
 		PreparedStatement  pstmt = null;
 		ResultSet rs = null;
 		try {
-//			String sql_1="select * from sawon where sabun=?";
 			String sql_2 = "DELETE FROM sawon WHERE sabun=?";
-//			conn = getConnection();
-//			pstmt = conn.prepareStatement(sql_1);
-//			pstmt.setInt(1, num);
-//			rs = pstmt.executeQuery();
-//			rs.next();
+			conn = getConnection();
 		    pstmt = conn.prepareStatement(sql_2);
 		    pstmt.setInt(1, num);
 		    result = pstmt.executeUpdate();
@@ -235,8 +230,7 @@ public class SawonDao {
 	      }catch (Exception e) {
 			e.printStackTrace();
 	         System.out.println(e.getMessage());
-	         System.out.
-	         println("dao delete오류");
+	         System.out.println("dao delete오류");
 		}finally {
 			 if(rs!= null) rs.close();
 	         if(pstmt!= null) pstmt.close();

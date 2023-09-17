@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.CustomDao;
 import dao.SawonDao;
+import dto.Order1;
 import dto.Sawon;
 import service.CommandProcess;
 
@@ -24,6 +25,7 @@ public class Order1WriteFormAction implements CommandProcess {
 		Date date  = new Date();
 		request.setAttribute("time",date);
 		int sabun = Integer.parseInt(request.getParameter("sabun")); 
+		
 		String name="";
 		
 		
@@ -43,5 +45,7 @@ public class Order1WriteFormAction implements CommandProcess {
 		request.setAttribute("sabun", sabun);
 		return "views/order1/order1WriteForm.jsp";
 	}
+
+
 
 }
