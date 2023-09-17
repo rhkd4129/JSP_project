@@ -20,6 +20,8 @@
 		git config --global core.autocrlf true
 		git branch생성 후 커밋 -> 원격으로 push할때	
 		git push origin a	orign:원격저장소 이름  a-> push할 저장소 이름 
+		git push --set-upstream origin ajax_version??
+		
 				
 			
 		 -->
