@@ -12,6 +12,8 @@
 </script>
 </body>
 		
-		<!-- git config --global core.autocrlf true -->
+		<!-- git config --global core.autocrlf true
+			ajax branch!!!
+		 -->
 </html>	
 
