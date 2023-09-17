@@ -11,6 +11,7 @@
    location.href="/jsp0906/main.do";
 </script>
 </body>
-
+		
+		<!-- git config --global core.autocrlf true -->
 </html>	
 

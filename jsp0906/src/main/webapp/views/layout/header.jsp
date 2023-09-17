@@ -46,7 +46,7 @@
 		            주문관리
 		          </a>
 		          <ul class="dropdown-menu px-3" aria-labelledby="navbarDropdown">
-		            <li><a class="dropdown-item" href="#">주문조회</a></li>
+		            <li><a class="dropdown-item" href="order1List.do">주문조회</a></li>
 		            <li><a class="dropdown-item" href="#">주문등록</a></li>
 		          </ul>
 		        </li>

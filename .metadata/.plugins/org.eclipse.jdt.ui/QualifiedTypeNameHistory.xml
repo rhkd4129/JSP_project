@@ -26,4 +26,5 @@
     <fullyQualifiedTypeName name="dto.Sawon"/>
     <fullyQualifiedTypeName name="dao.SawonDao"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 </qualifiedTypeNameHistroy>

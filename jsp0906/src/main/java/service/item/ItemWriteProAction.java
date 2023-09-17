@@ -47,7 +47,6 @@ public class ItemWriteProAction implements CommandProcess {
 		
 		
 		
-		return "views/item/ItemWritePro.jsp";
+		return "views/item/itemWritePro.jsp";
 	}
-
-}
+	}

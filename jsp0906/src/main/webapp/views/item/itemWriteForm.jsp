@@ -15,6 +15,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <!-- 회원가입 폼 시작 -->
+                
                 <form action = "itemWritePro.do" method="post">
                     <div class="mb-3">
                         <label for="item_name" class="form-label">이름</label>
@@ -33,7 +34,9 @@
                         <label for="item_price" class="form-label">가격</label>
                         <input type="text" class="form-control"  id="item_price" name="item_price">
                     </div>
-        
+        			
+        			
+        			
                     <button type="submit" class="btn btn-primary">가입하기</button>
                 </form>
                 <!-- 회원가입 폼 끝 -->

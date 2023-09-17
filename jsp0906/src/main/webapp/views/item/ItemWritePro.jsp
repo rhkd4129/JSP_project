@@ -20,7 +20,7 @@
 	<c:if test ="${result == 0}">
 		<script type="text/javascript">
 			alert("오류");
-			location.href="itemWrtieForm.do";
+			location.href="itemWriteForm.do";
 		</script>
 	</c:if>
 	

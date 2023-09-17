@@ -47,6 +47,34 @@ public class SawonDao {
 	
 	
 	
+	public String getName(int sabun) throws SQLException {
+		ResultSet rs = null;
+		Connection conn = null;
+		PreparedStatement  pstmt = null;
+		String name="";
+		String sql = "select sawon_name from sawon where sabun = ?";
+		
+		try {
+			 conn = getConnection();
+	         pstmt = conn.prepareStatement(sql);
+	         pstmt.setInt(1, sabun);
+	         rs = pstmt.executeQuery();
+	         
+	         if(rs.next()) {name= rs.getString(1);}
+	         
+		}catch (Exception e) {
+			e.printStackTrace();
+	         System.out.println(e.getMessage());
+	         System.out.println("dao getTotal오류");
+		}finally {
+			 if(rs!= null) rs.close();
+	         if(pstmt!= null) pstmt.close();
+	         if(conn!= null) conn.close();
+		}
+
+		return name;
+	}
+	
 	public int getTotalCnt() throws SQLException {
 		int toCont=0;
 		ResultSet rs = null;
@@ -245,14 +273,6 @@ public class SawonDao {
 //	
 //	
 //	
-		
-	
-		
-		
-		
-	
-	
-	
 	
 	}
 	

@@ -35,7 +35,8 @@
 						<tr>
 								<td>${startNum }</td>
 								<td class="px-5">${item.item_code }</td>
-								<td class="px-5">${item.item_name }</td>
+
+								<td><a href = 'itemContent.do?item_code=${item.item_code}&pageNum=${currentPage}'>${item.item_name }</a></td>
 								<td class="px-5">${item.item_price}</td>
 								<td class="px-5">${item.item_kind}</td>
 								<td class="px-5">${item.item_desc}</td>

@@ -1,19 +1,35 @@
 package dto;
 
-public class Order1 {
-	  private int		costcode;
+public class Order1 {  //	N쪽
+	  private int		custcode;    //PK
 	  private String 	order_date;
 	  private String 	order_desc;
 	  private String 	order_status;
-	  private int		sabun;
+	  private int		sabun;			//PK
+	  
+	  private String custname;
+	  private String sawon_name;
 	  
 	  
 	  
-	public int getCostcode() {
-		return costcode;
+	  
+	public String getCustname() {
+		return custname;
 	}
-	public void setCostcode(int costcode) {
-		this.costcode = costcode;
+	public void setCustname(String custname) {
+		this.custname = custname;
+	}
+	public String getSawon_name() {
+		return sawon_name;
+	}
+	public void setSawon_name(String sawon_name) {
+		this.sawon_name = sawon_name;
+	}
+	public int getCustcode() {
+		return custcode;
+	}
+	public void setCustcode(int custcode) {
+		this.custcode = custcode;
 	}
 	public String getOrder_date() {
 		return order_date;
